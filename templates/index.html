@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+
+  
+  <link href="./static/brain.ico" rel="icon">
+
+  <title>Deployment Tutorial 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+  <h1>Early Alzheimer's Detection</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Subject ID" placeholder="Subject ID" required="required" /> 
+        <input type="text" name="Visit" placeholder="Visit" required="required" />
+        <input type="text" name="MR Delay" placeholder="MR Delay" required="required" />
+        <input type="text" name="M/F" placeholder="M/F" required="required" />
+        
+        <input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="EDUC" placeholder="EDUC" required="required" />
+        <input type="text" name="SES" placeholder="SES" required="required" />
+        <input type="text" name="MMSE" placeholder="MMSE" required="required" />
+        <input type="text" name="CDR" placeholder="CDR" required="required" />
+        <input type="text" name="eTIV" placeholder="eTIV" required="required" />
+        <input type="text" name="nWBV" placeholder="nWBV" required="required" />
+    <input type="text" name="ASF" placeholder="ASF" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Click to view your Results</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+
+
