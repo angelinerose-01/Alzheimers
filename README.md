@@ -1,8 +1,15 @@
 # Alzheimers Disease Detection
-Alzheimer’s disease (AD) is an irreversible, progressive brain disorder that slowly destroy memory and thinking skills. 
-Detection of AD is very costlier, Involves multiple doctor reviews and Time consuming
-This project  aims to Provide a simple tool to the patients to get an early indication of Alzheimer’s disease.Patients can take the necessary tests on their homes and get a pre consultation or a pre diagnosis almost immediately. 
-This tool helps subjects predict if they have Alzheimer's or not in comfort of their houses. The model is trained taking into consideration the different methods and combinations of data that is available for processing. The data is fitted to the Random Forest algorithm and the model is trained. When a patient detail is entered, the model would predict if the patient has Alzheimer’s disease or not .
-Based on th tool’s prediction the patient  can get an early advice to consult the doctors.
-## Data
-The model was trained based on different cognitive test scores which was obtained from the OASIS website .
+Detecting if a patient has the risk of being affected with alzheimers is quite a tedious job. It takes multiple doctor visits and taking a lot of scans which could cost a lot of money and time to go to waste . The tool aims to be used as pre diagnostic step which could help the possibly affected patients to check out if they are at the risk of having alzheimers disease at the comfort of their own homes . The tool helps with a pre diagnosis or a consultation which provides the users an insight whether if they're at the risk of having alzheimers or not  . The model takes the cognitive test scores such as MMSE , SES and CDR and some more features as the input and uses random forest algorithm to classify if the patient is affected with alzheimers or not 
+## Data and Features
+The model was trained based on different cognitive test scores which was obtained from the OASIS website .The dataset has around  374 bservations. Each subject is above the age of 65, every one is right handed  and has had atleast one clinical visit.
+The features used in the model are 
+- EDUC
+- SES
+- MMSE
+- CDR
+- eTIV
+- nWBV
+- ASF
+- MR Delay
+- Gender 
+These tests are available online and can be taken by anyone .
